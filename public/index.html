@@ -3,11 +3,42 @@
 <head>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="style.css">
 </head>
     <body ng-app="todo">
 
-    <div ng-controller="MainCtrl">
-    dsafkljlskajfalksfjlkd;sjfas;lkjflkdsajflask;jfl
+    <div ng-controller="MainCtrl as main">
+    <md-toolbar layout-align="center center" layout='column'>
+        <span flex></span>
+        <h2 class="md-display-3">
+            <ng-pluralize count="main.todos.length"
+                 when="{'0': '0 Todo\'s',
+                     'one': '1 Todo',
+                     'other': '{} Todo\'s'}">
+            </ng-pluralize>
+        </h2>
+        <span flex></span>
+    </md-toolbar>        
+    <md-content layout="column" flex class="md-padding" layout-align="center center">
+        <md-whiteframe class="md-whiteframe-z2">
+            <md-subheader class="md-no-sticky">A list of all your todos</md-subheader>
+            <md-list-item ng-repeat="todo in main.todos">
+                <p> {{ todo.text }} </p>
+                <md-checkbox class="md-secondary" ng-model="topping.wanted"></md-checkbox>
+            </md-list-item>
+            <div layout="row">
+                <span flex></span>
+                <md-button class="md-warn md-raised">Delete</md-button>
+            </div>
+        </md-whiteframe>
+        <md-whiteframe class="md-whiteframe-z2">
+            <md-input-container>
+          <!-- Use floating label instead of placeholder -->
+                <label>Add a todo</label>
+                <input ng-model="user.name" type="text">
+            </md-input-container>
+        </md-whiteframe>
+    </md-content>
     </div>
 
     <script src="/bower_components/angular/angular.js"></script>
