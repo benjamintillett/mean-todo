@@ -8,7 +8,6 @@ function MainCtrl($http){
 	$http.get('/api/todos/')
 		.success(function(data){
 			self.todos = data;
-			console.log(data);
 		})
 		.error(function(data){
 			console.log('Error: ' + data);
@@ -37,6 +36,15 @@ function MainCtrl($http){
 				console.log('Error: ' + data);
 			});
 	};
+
+	self.deleteSelected = function(){
+		self.todos.forEach(function(todo){
+			if(todo.isChecked === true){
+				self.deleteTodo(todo._id);
+			}	
+		});
+	}
+
 }
 
 angular.module('todo')
