@@ -1,0 +1,4 @@
+{
+  "verbose": true,
+  "ignore": ["*.Spec.js", "node_modules/**/node_modules","node_modules/**/*","public/bower_components/**/*"]
+}

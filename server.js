@@ -24,7 +24,7 @@ var Todo = mongoose.model('Todo',{
 	text: String
 });
 
-// routes 
+// api routes 
 
 app.get('/api/todos',function(req,res){
 	Todo.find(function(err,todos){
@@ -76,6 +76,14 @@ app.delete('/api/todos/:todo_id',function(req,res){
 });
 
 
+// application routes 
+app.get('/material',function(req,res){
+	res.sendfile('./public/index.html');
+});
+
+app.get('/bootstrap',function(req,res){
+	res.sendfile('./public/bootstrap-index.html');
+});
 
 // listen (start app with node server.js) ======================================
 module.exports = app

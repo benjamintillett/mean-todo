@@ -8,6 +8,7 @@ function MainCtrl($http){
 	$http.get('/api/todos/')
 		.success(function(data){
 			self.todos = data;
+			console.log(data);
 		})
 		.error(function(data){
 			console.log('Error: ' + data);
