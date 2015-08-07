@@ -25,7 +25,7 @@
             <md-subheader class="md-no-sticky">A list of all your todos</md-subheader>
             <md-list-item ng-repeat="todo in main.todos">
                 <p> {{ todo.text }} </p>
-                <md-checkbox ng-model="todo.isChecked" ngChange='tellMe(todo)'  class="md-secondary" ng-model="topping.wanted"></md-checkbox>
+                <md-checkbox ng-model="todo.isChecked" ngChange='tellMe(todo)'  class="md-secondary"></md-checkbox>
             </md-list-item>
             <div layout="row">
                 <span flex></span>
