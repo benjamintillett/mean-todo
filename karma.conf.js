@@ -18,6 +18,7 @@ module.exports = function(config) {
         'node_modules/angular/angular.js',
         'node_modules/angular-mocks/angular-mocks.js',
         'public/src/*.js',
+        'test/unit/*.js',
     ],
 
 

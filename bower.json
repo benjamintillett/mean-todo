@@ -1,0 +1,28 @@
+{
+  "name": "todo",
+  "version": "0.0.0",
+  "homepage": "https://github.com/benjamintillett/mean-todo",
+  "description": "extending scotch.io's todo app",
+  "main": "server.js",
+  "authors": [
+    "Ben Tillett"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.4.x",
+    "angular-mocks": "1.4.x",
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.1.1",
+    "angular-route": "~1.4.0",
+    "angular-resource": "~1.4.0",
+    "jquery": "~2.1.1",
+    "angular-animate": "~1.4.0"
+  }
+}
